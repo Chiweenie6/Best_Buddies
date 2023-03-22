@@ -89,7 +89,7 @@ module.exports = {
       .catch((err) => res.status(505).json(err));
   },
   // DELETE/remove a reaction from a Thought and updates the reaction array on the Thought
-  deleteThought(req, res) {
+  deleteReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
       { $pull: { reactions: { reactionId: req.params.reactionId } } },

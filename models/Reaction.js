@@ -1,4 +1,4 @@
-const { Schema, Types } = require('mongoose');
+const { Schema, Types } = require("mongoose");
 
 const reactionSchema = new Schema(
   {
@@ -17,9 +17,9 @@ const reactionSchema = new Schema(
       ref: "User.username",
     },
     createdAt: {
-        type: Date,
-        default: Date.now,
-        get: date => date.toLocaleDateString(),
+      type: Date,
+      default: Date.now,
+      get: (date) => date.toLocaleDateString(),
     },
   },
   {
