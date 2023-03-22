@@ -1,0 +1,30 @@
+{
+  "name": "best_buddies",
+  "version": "1.0.0",
+  "description": "An API for a  social networking application where users can add friends, create posts, exchange thoughts and ideas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index",
+    "seed": "node utils/seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chiweenie6/Best_Buddies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chiweenie6/Best_Buddies/issues"
+  },
+  "homepage": "https://github.com/Chiweenie6/Best_Buddies#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.9.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
