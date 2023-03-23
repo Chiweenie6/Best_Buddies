@@ -1,39 +1,71 @@
-const userData = [
-  {
-    username: "burgerBob",
-    email: "burgerBob@gmail.com",
-  },
-  {
-    username: "peteyGriff",
-    email: "peteyGriff@gmail.com",
-  },
-  {
-    username: "RogerTheAlien",
-    email: "RogerTheAlien@gmail.com",
-  },
+const usernames = [
+  "burgerBob",
+  "peteyGriff",
+  "RogerTheAlien",
+  "TheOneRing",
+  "mountainDew",
+  "DogsRule",
+  "LuckyCharms",
+  "CodingNerd",
+  "PS5Gamer",
+  "NeedCaffeine",
 ];
 
-const thoughtData = [
-  {
-    thoughtText: "I love burgers 🍔.",
-    username: "burgerBob",
-    userId: "1",
-  },
-  {
-    thoughtText: "I love salty french fries 🍟.",
-    username: "burgerBob",
-    userId: "1",
-  },
-  {
-    thoughtText: "Being a family guy is very important 👨‍👩‍👧‍👦.",
-    username: "peteyGriff",
-    userId: "2",
-  },
-  {
-    thoughtText: "I believe there are aliens out there 👽.",
-    username: "RogerTheAlien",
-    userId: "3",
-  },
+const thoughtTexts = [
+  "Burgers are so delicious 🍔.",
+  "I love salty french fries 🍟.",
+  "Being a family guy is very important 👨‍👩‍👧‍👦.",
+  "I believe there are aliens out there 👽.",
+  "Destiny 2 is an amazing game! 🎮",
+  "Frodo was very brave when he destroyed the one ring 💍.",
+  "Lucky Charms cereal is the best late night snack 🍀.",
+  "Looking at my computer screen for too long feels like im staring at the matrix 🖥️",
+  "I prefer Monster energy drink to Red Bull 🧌",
+  "My favorite dog is a chihuahua mix 🐶",
 ];
 
-module.exports = { userData, thoughtData };
+const reactions = [
+  "YAAAAAAAAYYYYYYYYYYY!!!!!🎉",
+  "I can't believe what I'm hearing 👂.",
+  "I can game all day long 🕹️.",
+  "I can eat anything and be happy 🍌🍇🍗🥙🍪🍕🥒.",
+  "I prefer almond milk to cow milk 🥛.",
+  "Ketchup is the best condiment 🍅.",
+  "Tea is my preferred source of caffeine 🍵.",
+  "Gandalf was such a good character 🧙‍♂️.",
+  "UFOs exist!!! 🛸.",
+  "Coding is fun! ⌨️ ",
+];
+
+const users = [];
+const random = (rando) => rando[Math.floor(Math.random() * rando.length)];
+const randomUsername = () => `${random(usernames)}`;
+
+// Get random Thought with Reactions
+const randomThought = (length) => {
+  var thought = [];
+  for (let i = 0; i < length; i++) {
+    thought.push({
+      thoughtText: random(thoughtTexts),
+      reactions: [...reactions(2)],
+    });
+  }
+  return thought;
+};
+
+// Get Reactions to add to Thought
+const randomReactions = (length) => {
+  if (length === 1) {
+    return random(reactions);
+  }
+  const reaction = [];
+  for (let i = 0; i < length; i++) {
+    reaction.push({
+      reactionText: random(reactions),
+      username: randomUsername(),
+    });
+  }
+  return reaction;
+};
+
+module.exports = { randomUsername, randomThought };

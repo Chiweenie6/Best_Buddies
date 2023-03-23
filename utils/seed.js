@@ -1,6 +1,6 @@
 const connection = require("../config/connection");
 const { User, Thought } = require("../models");
-const { userData, thoughtData } = require("./data");
+const { randomUsername, randomThought } = require("./data");
 
 connection.on("error", (err) => err);
 
@@ -10,15 +10,16 @@ connection.once("open", async () => {
   // Remove existing Thoughts
   await Thought.deleteMany({});
 
-  const users = [];
-  const thoughts = [];
+  const users = randomUsername(6);
+  const thoughts = randomThought(2);
 
   // Add Users to the collection
-  await User.collection.insertMany(userData);
+  await User.collection.insertMany(users);
   // Add Thoughts to the collection
-  await Thought.collection.insertMany(thoughtData);
+  await Thought.collection.insertMany(thoughts);
 
-  console.table();
-  console.info("🌱 Seeding Complete 🌱");
+  console.table(users);
+  console.table(thoughts);
+  console.info("🌱 The Seeding is Complete 🌱");
   process.exit(0);
 });
