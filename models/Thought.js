@@ -15,10 +15,10 @@ const thoughtSchema = new Schema(
       default: Date.now,
       get: (date) => date.toLocaleDateString(),
     },
-    username: {
-      type: String,
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: "user",
       required: true,
-      ref: "User.username",
     },
     reactions: [reactionSchema],
   },
