@@ -1,8 +1,22 @@
 const connection = require("../config/connection");
 const { User, Thought } = require("../models");
+const { db } = require("../models/User");
 const { randomUsername, randomThoughts } = require("./data");
 
 connection.on("error", (err) => err);
+
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("BestBuddiesDB");
+  dbo.collection("users").drop(function(err, delOK) {
+    if (err) throw err;
+    if (delOK) console.log("🔥🔥🔥 Collection deleted 🔥🔥🔥");
+    db.close();
+  });
+});
 
 connection.once("open", async () => {
   // Remove existing Users
