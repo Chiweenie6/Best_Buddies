@@ -47,6 +47,7 @@ const randomThoughts = (length) => {
   for (let i = 0; i < length; i++) {
     thoughts.push({
       thoughtText: random(thoughtTexts),
+      username: randomUsername(),
       reactions: [...randomReactions(2)],
     });
   }
