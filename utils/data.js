@@ -42,15 +42,15 @@ const random = (rando) => rando[Math.floor(Math.random() * rando.length)];
 const randomUsername = () => `${random(usernames)}`;
 
 // Get random Thought with Reactions
-const randomThought = (length) => {
-  var thought = [];
+const randomThoughts = (length) => {
+  let thoughts = [];
   for (let i = 0; i < length; i++) {
-    thought.push({
+    thoughts.push({
       thoughtText: random(thoughtTexts),
-      reactions: [...reactions(2)],
+      reactions: [...randomReactions(2)],
     });
   }
-  return thought;
+  return thoughts;
 };
 
 // Get Reactions to add to Thought
@@ -68,4 +68,4 @@ const randomReactions = (length) => {
   return reaction;
 };
 
-module.exports = { randomUsername, randomThought };
+module.exports = { randomUsername, randomThoughts };
