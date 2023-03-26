@@ -1,10 +1,12 @@
 const connection = require("../config/connection");
 const { User, Thought } = require("../models");
-const { db } = require("../models/User");
+// const { db } = require("../models/User");
 const { randomUsername, randomThoughts } = require("./data");
 
 connection.on("error", (err) => err);
 
+connection.once("open", () => {
+// Dropping/removing the old collection before creating/adding a new collection
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
@@ -16,6 +18,7 @@ MongoClient.connect(url, function(err, db) {
     if (delOK) console.log("🔥🔥🔥 Collection deleted 🔥🔥🔥");
     db.close();
   });
+});
 });
 
 connection.once("open", async () => {
