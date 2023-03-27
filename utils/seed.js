@@ -15,12 +15,12 @@ connection.once("open", async () => {
   const thoughts = randomThoughts(10);
 
   for (let i = 0; i < randomUsers.length; i++) {
-    const userName = randomUsers[i];
-    const email = `${userName}@gmail.com`;
+    const username = randomUsers[i];
+    const email = `${username}@gmail.com`;
     const friends = randomUsername();
 
     users.push({
-      userName,
+      username,
       email,
       friends,
     });
