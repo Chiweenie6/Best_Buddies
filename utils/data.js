@@ -62,7 +62,7 @@ const randomReactions = (length) => {
   const reaction = [];
   for (let i = 0; i < length; i++) {
     reaction.push({
-      reactionText: random(reactions),
+      reactionBody: random(reactions),
       username: randomUsername(),
     });
   }

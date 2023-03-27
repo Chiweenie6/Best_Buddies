@@ -16,8 +16,8 @@ const thoughtSchema = new Schema(
       get: (date) => date.toLocaleDateString(),
     },
     userId: {
+      ref: "User",
       type: Schema.Types.ObjectId,
-      ref: "user",
       required: true,
     },
     reactions: [reactionSchema],

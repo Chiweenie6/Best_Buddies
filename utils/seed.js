@@ -5,27 +5,11 @@ const { randomUsername, randomThoughts } = require("./data");
 
 connection.on("error", (err) => err);
 
-connection.once("open", () => {
-// Dropping/removing the old collection before creating/adding a new collection
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
-
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("BestBuddiesDB");
-  dbo.collection("users").drop(function(err, delOK) {
-    if (err) throw err;
-    if (delOK) console.log("🔥🔥🔥 Collection deleted 🔥🔥🔥");
-    db.close();
-  });
-});
-});
-
 connection.once("open", async () => {
   // Remove existing Users
-  await User.deleteMany({});
+  User.deleteMany({});
   // Remove existing Thoughts
-  await Thought.deleteMany({});
+  Thought.deleteMany({});
 
   const users = [];
   const thoughts = randomThoughts(10);
