@@ -29,6 +29,10 @@ const userSchema = new Schema(
         ref: "User",
       },
     ],
+    // docModel: {
+    //   type: String,
+    //   enum: ["User", "Thought"],
+    // },
   },
   {
     toJSON: {

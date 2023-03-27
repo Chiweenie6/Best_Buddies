@@ -17,12 +17,10 @@ connection.once("open", async () => {
   for (let i = 0; i < randomUsers.length; i++) {
     const username = randomUsers[i];
     const email = `${username}@gmail.com`;
-    const friends = randomUsername();
 
     users.push({
       username,
       email,
-      friends,
     });
   }
 
