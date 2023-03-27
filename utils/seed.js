@@ -1,21 +1,21 @@
 const connection = require("../config/connection");
 const { User, Thought } = require("../models");
 // const { db } = require("../models/User");
-const { randomUsername, randomThoughts } = require("./data");
+const { randomUsername, randomThoughts, randomUsers } = require("./data");
 
 connection.on("error", (err) => err);
 
 connection.once("open", async () => {
   // Remove existing Users
-  User.deleteMany({});
+  await User.deleteMany({});
   // Remove existing Thoughts
-  Thought.deleteMany({});
+  await Thought.deleteMany({});
 
   const users = [];
   const thoughts = randomThoughts(10);
 
-  for (let i = 0; i < 11; i++) {
-    const userName = randomUsername();
+  for (let i = 0; i < randomUsers.length; i++) {
+    const userName = randomUsers[i];
     const email = `${userName}@gmail.com`;
     const friends = randomUsername();
 

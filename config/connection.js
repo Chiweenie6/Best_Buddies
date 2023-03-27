@@ -1,7 +1,7 @@
 const { connect, connection } = require("mongoose");
 
 const connectionString =
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/BestBuddiesDB";
+  process.env.MONGODB_URI || "mongodb://localhost:27017/BestBuddiesDB";
 
 connect(connectionString, {
   useNewUrlParser: true,

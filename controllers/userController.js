@@ -3,7 +3,7 @@ const { User, Thought } = require("../models");
 module.exports = {
   // GET all Users
   getAllUsers(req, res) {
-    User.find({})
+    User.find()
       .then((users) => res.json(users))
       .catch((err) => res.status(505).json(err));
   },

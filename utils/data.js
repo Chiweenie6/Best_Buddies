@@ -37,7 +37,23 @@ const reactions = [
   "Coding is fun! ⌨️ ",
 ];
 
-const users = [];
+// Function for non-repeating random usernames
+function shuffle(array) {
+  var i = array.length,
+    j = 0,
+    temp;
+
+  while (i--) {
+    j = Math.floor(Math.random() * (i + 1));
+    // swap randomly chosen element with current element
+    temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+}
+const randomUsers = shuffle(usernames);
+
 const random = (rando) => rando[Math.floor(Math.random() * rando.length)];
 const randomUsername = () => `${random(usernames)}`;
 
@@ -69,4 +85,4 @@ const randomReactions = (length) => {
   return reaction;
 };
 
-module.exports = { randomUsername, randomThoughts };
+module.exports = { randomUsername, randomThoughts, randomUsers };
