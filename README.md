@@ -1,5 +1,5 @@
 # Best_Buddies
-An API for a  social networking application where users can add friends, create posts, exchange thoughts and ideas.
+An API for a social networking application where users can add friends, create posts, and comment on each other's posts.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue)]((https://opensource.org/licenses/MIT))
 
