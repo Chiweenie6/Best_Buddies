@@ -20,9 +20,9 @@ const thoughtSchema = new Schema(
       default: Date.now,
       get: (date) => date.toLocaleDateString(),
     },
-      username: {
-        type: String,
-        required: true,
+    username: {
+      type: String,
+      required: true,
     },
     reactions: [reactionSchema],
   },
