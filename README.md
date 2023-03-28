@@ -23,6 +23,10 @@ An API for a  social networking application where users can add friends, create 
   This API will allow a social networking site to handle large amounts of data in an unstructured form. The user has the ability to create posts/thoughts to share with friends. Users can add their own reactions to friend's posts. Things change, so the posts/thouhgts and reactions can also be changed/updated. If the user chooses, they can also delete their posts and reactions. Users can also add friends to their profile to see what their friend's are up to and saying.
   
   Images:  
+  ![image](https://user-images.githubusercontent.com/113393706/228097191-c40c5057-9ff8-4769-8505-00eefde366cf.png)  
+  ![image](https://user-images.githubusercontent.com/113393706/228097267-fec45f84-e29c-48f1-9fd2-cf6e0d37627e.png)  
+  ![image](https://user-images.githubusercontent.com/113393706/228097332-5419952a-4781-4dc3-af1c-3f7d7379b4c9.png)  
+  ![image](https://user-images.githubusercontent.com/113393706/228097456-8f410a89-2b22-4962-b9b9-72cd9f85b8b7.png)
 
 
 ## Installation
