@@ -1,5 +1,5 @@
 # Best_Buddies
-An API for a  social networking application where users can add friends, create posts, exchange thoughts and ideas.
+An API for a social networking application where users can add friends, create posts, and comment on each other's posts.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue)]((https://opensource.org/licenses/MIT))
 
@@ -20,9 +20,13 @@ An API for a  social networking application where users can add friends, create 
 
 
 ## Usage  
-  This API will allow a social networking site to handle large amounts of data in an unstructured form. The user has the ability to create posts/thoughts to share with friends. Users can add their own reactions to friend's posts. Things change, so the posts/thouhgts and reactions can also be changed/updated. If the user chooses, they can also delete their posts and reactions. Users can also add friends to their profile to see what their friend's are up to and saying.
+  This API will allow a social networking site to handle large amounts of data in an unstructured form. The user has the ability to create posts/thoughts to share with friends. Users can add their own reactions to friend's posts. Things change, so the posts/thoughts and reactions can also be changed/updated. If the user chooses, they can also delete their posts and reactions. Users can also add friends to their profile to see what their friend's are up to and saying.
   
   Images:  
+  ![image](https://user-images.githubusercontent.com/113393706/228098574-32c16c49-a974-4a44-b1b4-ad5a00325d71.png)  
+  ![image](https://user-images.githubusercontent.com/113393706/228098449-25086239-5cf1-437b-ae29-30698c4b721f.png)  
+  ![image](https://user-images.githubusercontent.com/113393706/228098846-17f89ebf-a586-4316-9ff8-0187c9b7631b.png)  
+  ![image](https://user-images.githubusercontent.com/113393706/228097456-8f410a89-2b22-4962-b9b9-72cd9f85b8b7.png)
 
 
 ## Installation
