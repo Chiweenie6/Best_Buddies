@@ -4,7 +4,7 @@ module.exports = {
   // GET all Users
   getAllUsers(req, res) {
     User.find()
-      .then(users => res.json(users))
+      .then((users) => res.json(users))
       .catch((err) => res.status(505).json(err));
   },
   // GET single User
@@ -12,8 +12,6 @@ module.exports = {
     User.findOne({ _id: req.params.userId })
       // .select ("-__v") = Does not show versionKey
       .select("-__v")
-      // .populate("friends")
-      // .populate("thoughts")
       .then((user) =>
         !user
           ? // If User id not found
@@ -79,13 +77,13 @@ module.exports = {
   },
   // DELETE/remove friend from User's friend list
   removeFriendFromUser(req, res) {
-    User.findByIdAndUpdate(
+    User.findOneAndUpdate(
       { _id: req.params.userId },
-      { $pull: { friends: { friendId: req.params.friendId } } },
+      { $pull: { friends: req.params.friendId } },
       { runValidators: true, new: true }
     )
       .then((user) =>
-        !student
+        !user
           ? res.status(404).json({ message: "🚫 Couldn't Remove Friend 🚫" })
           : res.json(user)
       )

@@ -32,7 +32,7 @@ module.exports = {
           ? res
               .status(404)
               .json({ message: "🚫 Thought created, No User Id Found 🚫" })
-          : res.json("Thought Created 💭")
+          : res.json(user)
       )
       .catch((err) => {
         res.status(505).json(err);
@@ -61,7 +61,7 @@ module.exports = {
         !thought
           ? res.status(404).json({ message: "🚫 Couldn't Find Thought Id 🚫" })
           : User.findOneAndUpdate(
-              { thoughts: req.params.thoughtsId },
+              { thoughts: req.params.thoughtId },
               { $pull: { thoughts: req.params.thoughtId } },
               { new: true }
             )
@@ -69,7 +69,7 @@ module.exports = {
       .then((user) =>
         !user
           ? res.status(404).json({ message: "🚫 Couldn't Find User Id 🚫" })
-          : res.json({ message: " Thought deleted 🔥" })
+          : res.json(user)
       )
       .catch((err) => res.status(505).json(err));
   },
