@@ -14,6 +14,7 @@ connection.once("open", async () => {
   const users = [];
   const thoughts = randomThoughts(10);
 
+  // Information being pushed/added to the users array
   for (let i = 0; i < randomUsers.length; i++) {
     const username = randomUsers[i];
     const email = `${username}@gmail.com`;

@@ -17,12 +17,14 @@ const userSchema = new Schema(
       match:
         /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
     },
+    // References the Thought model to get thoughts
     thoughts: [
       {
         type: Schema.Types.ObjectId,
         ref: "Thought",
       },
     ],
+    // References the User model to get friends/userIds
     friends: [
       {
         type: Schema.Types.ObjectId,
