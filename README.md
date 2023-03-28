@@ -24,7 +24,7 @@ An API for a  social networking application where users can add friends, create 
   
   Images:  
   ![image](https://user-images.githubusercontent.com/113393706/228097191-c40c5057-9ff8-4769-8505-00eefde366cf.png)  
-  ![image](https://user-images.githubusercontent.com/113393706/228097943-80af8653-d520-4a09-bebc-2c439e42629a.png)  
+  ![image](https://user-images.githubusercontent.com/113393706/228098449-25086239-5cf1-437b-ae29-30698c4b721f.png)  
   ![image](https://user-images.githubusercontent.com/113393706/228097332-5419952a-4781-4dc3-af1c-3f7d7379b4c9.png)  
   ![image](https://user-images.githubusercontent.com/113393706/228097456-8f410a89-2b22-4962-b9b9-72cd9f85b8b7.png)
 
